@@ -11,7 +11,7 @@ layout: default
     <title>design retreat indesign for human-robot interaction</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Londrina+Sketch&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/png">
 
 
@@ -30,6 +30,16 @@ layout: default
             font-weight: 400;
             font-style: normal;
         }
+        .professor-name{
+            font-family: "Baumans", system-ui;
+            font-weight: 400;
+            font-style: normal;  
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: "Londrina Sketch", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
         .hero-section {
             position: relative;
@@ -41,7 +51,7 @@ layout: default
             justify-content: center;
             align-items: center;
             background-color: white;
-
+            filter: grayscale(100%);
         }
 
         .hero-section .title-container {
@@ -307,12 +317,12 @@ layout: default
             <div class="organizers">
                 <div class="organizer">
                     <img src="patricia.jpg" alt="patricia">
-                    <h3><a href="https://patricialvesoliveira.com/" target="_blank">patricia alves-oliveira</a></h3>
+                    <h3 class="professor-name"><a href="https://patricialvesoliveira.com/" target="_blank">patricia alves-oliveira</a></h3>
                     <p>university of michigan, us</p>
                 </div>
                 <div class="organizer">
                     <img src="anastasia.jpg" alt="anastasia">
-                    <h3><a href="https://www.akostrowski.com/" target="_blank">anastasia kouvaras ostrowski</a></h3>
+                    <h3 class="professor-name"><a href="https://www.akostrowski.com/" target="_blank">anastasia kouvaras ostrowski</a></h3>
                     <p>purdue university, us</p>
                 </div>
             </div>
