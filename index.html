@@ -11,8 +11,10 @@ layout: default
     <title>design retreat indesign for human-robot interaction</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=baumans&family=londrina+sketch&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
 
     <style>
@@ -26,17 +28,17 @@ layout: default
         html {
             width: 100%;
             height: 100%;
-            font-family: "Baumans", system-ui;
+            font-family: "baumans", system-ui;
             font-weight: 400;
             font-style: normal;
         }
         .professor-name{
-            font-family: "Baumans", system-ui;
+            font-family: "baumans", system-ui;
             font-weight: 400;
             font-style: normal;  
         }
         h1,h2,h3,h4,h5,h6{
-            font-family: "Londrina Sketch", sans-serif;
+            font-family: "londrina sketch", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
@@ -53,7 +55,6 @@ layout: default
             background-color: white;
         }
 
-        
 
         .hero-section .title-container {
             position: relative;
@@ -268,6 +269,28 @@ layout: default
                 font-size: 2rem;
             }
         }
+        .highlight {
+            background-color:#efc8ff;
+            border-radius: 8px;
+            padding: 2px 6px;
+            color: black;
+            font-weight: bold;
+        }
+        /* style for the icons */
+.icon-link {
+    color: black;         /* change the color of icons to grey */
+    text-decoration: none; /* remove underline */
+    margin-left: 2px;   /* add spacing between the name and the icons */
+}
+
+.icon-link i {
+    font-size: 20px;  /* adjust icon size */
+}
+
+.icon-link:hover {
+    color: darkslategray;  /* slight change in color on hover */
+}
+
     </style>
 </head>
 
@@ -276,16 +299,16 @@ layout: default
     <!-- hero section -->
     <div class="hero-section">
         <div class="title-container">
-            <h1 style="color:#002FA7">design retreat in<br>human-robot interaction</h1>
+            <h1 style="color:#af75e8">design retreat in<br>human-robot interaction</h1>
         </div>
     </div>
 
     <!-- about section -->
     <div class="about-section">
         <h2>about</h2>
-        <p>the design retreat brings together academics and industry professionals from all over the world who are
-            experts in the field of design for human-robot interaction (design for hri) to engage in 2 days of hands-on
-            interactive activities that will explore how to shape the future of design for hri of a 5-10 years roadmap.
+        <p>the design retreat <span class="highlight">brings together academics and industry professionals</span> from all over the world who are
+            experts in the field of design for human-robot interaction (<span class="highlight">design for hri</span>) to engage in 2 days of hands-on
+            interactive activities that will explore how to shape the future of design for hri of a <span class="highlight">5-10 years roadmap</span>.
         </p>
     </div>
     <!-- solid color section -->
@@ -309,7 +332,6 @@ layout: default
 
     </div>
 
-
     <div class="organizers">
 
         <!-- organizers section -->
@@ -318,17 +340,53 @@ layout: default
             <div class="organizers">
                 <div class="organizer">
                     <img src="patricia.jpg" alt="patricia">
-                    <h3 class="professor-name"><a href="https://patricialvesoliveira.com/" target="_blank">patricia alves-oliveira</a></h3>
-                    <p>university of michigan, us</p>
+                    <h3 class="professor-name">
+                        <!-- name -->
+                        patrícia alves-oliveira
+                        <!-- icons next to name -->
+
+                    </h3>
+                    <p>university of michigan, us</p> <p style="margin-top:4px">                         <a href="https://patricialvesoliveira.com/" target="_blank" class="icon-link">
+                        <i class="fas fa-globe" title="personal website"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/patricia-alves-oliveira" target="_blank" class="icon-link">
+                        <i class="fab fa-linkedin" title="linkedin"></i>
+                    </a>
+                    <a href="https://scholar.google.pt/citations?user=tbn31lmaaaaj&hl=en" target="_blank" class="icon-link">
+                        <i class="fa-brands fa-google-scholar"></i>
+                    </a>
+                    <a href="mailto:robopati@umich.edu" class="icon-link" target="_blank" >
+                        <i class="fas fa-envelope" title="email"></i>
+                    </a></p>
                 </div>
                 <div class="organizer">
                     <img src="anastasia.jpg" alt="anastasia">
-                    <h3 class="professor-name"><a href="https://www.akostrowski.com/" target="_blank">anastasia kouvaras ostrowski</a></h3>
+                    <h3 class="professor-name">
+                        <!-- name -->
+                        anastasia kouvaras ostrowski
+                        <!-- icons next to name -->
+                        
+                    </h3>
                     <p>purdue university, us</p>
+                    
+                    <p style="margin-top:4px"><a href="https://www.akostrowski.com/" target="_blank" class="icon-link">
+                        <i class="fas fa-globe" title="personal website"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anastasia-kouvaras-ostrowski/" target="_blank" class="icon-link">
+                        <i class="fab fa-linkedin" title="linkedin"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=nnnytkaaaaaj&hl=en" target="_blank" class="icon-link">
+                        <i class="fab fa-google-scholar"></i>
+                    </a>
+                    <a href="mailto:akostrow@purdue.edu" class="icon-link" target="_blank" >
+                        <i class="fas fa-envelope" title="email"></i>
+                    </a></p>
                 </div>
             </div>
         </div>
     </div>
+    
+
 
     <div class="participants-section"  style="background-color: #fdfaf6;">
         <h2>participants</h2>
@@ -371,7 +429,7 @@ layout: default
     </div>
     <div class="open-access">
         <div class="participants-section">
-            <h2>open access</h2>
+            <h2>future dissemination</h2>
 
             <div class="participants">
 
@@ -379,12 +437,12 @@ layout: default
             </div>
         </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RN77H1CFE"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=g-3rn77h1cfe"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-3RN77H1CFE');
+  window.datalayer = window.datalayer || [];
+  function gtag(){datalayer.push(arguments);}
+  gtag('js', new date());
+  gtag('config', 'g-3rn77h1cfe');
 </script>
 </body>
 
