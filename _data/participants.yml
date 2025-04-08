@@ -1,115 +1,115 @@
-- name: Abhishek Nesarula
+- name: abhishek nesarula
   in: https://www.linkedin.com/in/abhishek-narula-94045145/
-  inst: University of Michigan, US
+  inst: university of michigan, us
   image: an.jpg
 
 
 
-- name: Bernhard Sendhoff
+- name: bernhard sendhoff
   in: https://www.linkedin.com/in/bernhard-sendhoff-90304656/
-  inst: Honda Research Institute Europe, Germany
+  inst: honda research institute europe, germany
   image: bs.jpeg
 
 
-- name: Carla Diana
+- name: carla diana
   web: https://www.carladiana.com/
-  inst: Cranbrook Academy of Art, US
+  inst: cranbrook academy of art, us
   image: cd.jpeg
 
-- name: David Sirkin
+- name: david sirkin
   scholar: https://scholar.google.com/citations?user=ual27FYAAAAJ
-  inst: Stanford University, US
+  inst: stanford university, us
   image: ds.jpg
 
-- name: Hannah Pelikan
+- name: hannah pelikan
   web: https://hannahpelikan.com/
-  inst: Linköping University, Sweden
+  inst: linköping university, sweden
   image: hp.jpeg
 
-- name: Jonathan Ota
+- name: jonathan ota
   web: https://www.jonathanota.com/
-  inst: Amazon Lab126, US
+  inst: amazon lab126, us
   image: jo.jpeg
 
-- name: Karolina Zawieska
+- name: karolina zawieska
   scholar: https://scholar.google.com/citations?user=x_3-cpcAAAAJ
-  inst: Aarhus University, Denmark
+  inst: aarhus university, denmark
   image: kz.jpeg
 
 
 
-- name: Mafalda Gamboa
+- name: mafalda gamboa
   web: https://gamboa.owlstown.net/
-  inst: Chalmers University of Technology, Sweden
+  inst: chalmers university of technology, sweden
   image: mg.jpeg
 
 
 
-- name: Marco C. Rozendaal
+- name: marco c. rozendaal
   in: https://www.linkedin.com/in/marco-rozendaal-363a736
-  inst: Delft University of Technology, Netherlands
+  inst: delft university of technology, netherlands
   image: mr.jpg
 
-- name: Natalie Friedman
+- name: natalie friedman
   in: https://www.linkedin.com/in/nataliefriedman/
-  inst: SAP, US
+  inst: sap, us
   image: nf.jpeg
 
-- name: Nik Martelaro
+- name: nik martelaro
   web: https://nikmartelaro.com/
-  inst: Carnegie Mellon University, US
+  inst: carnegie mellon university, us
   image: nm.jpeg
 
-- name: Paulo Alvito
+- name: paulo alvito
   in: https://www.linkedin.com/in/paulo-alvito-7544541/
-  inst: ID Mind, Portugal
+  inst: id mind, portugal
   image: pa.jpeg
 
 
-- name: Safinah Ali
+- name: safinah ali
   web: https://safinahali.com/
-  inst: New York University, US
+  inst: new york university, us
   image: sa.jpeg
 
-- name: Samantha Reig
+- name: samantha reig
   web: https://samreig.com/
-  inst: University of Massachusetts Lowell, US
+  inst: university of massachusetts lowell, us
   image: sr.jpeg
 
 
-- name: Selma Sabanovic
+- name: selma sabanovic
   in: https://www.linkedin.com/in/selma-%C5%A1abanovi%C4%87-7352a944/
-  inst: Indiana University Bloomington, US
+  inst: indiana university bloomington, us
   image: ss.jpg
 
-- name: Sonya Kwak
+- name: sonya kwak
   scholar: https://scholar.google.com/citations?user=izeQp3AAAAAJ
-  inst: Korea Institute of Science and Technology, Korea
+  inst: korea institute of science and technology, korea
   image: sk.jpeg
 
 
-- name: Sooyeon Jeong
+- name: sooyeon jeong
   web: https://www.sooyeonjeong.com/
-  inst: Purdue University, US
+  inst: purdue university, us
   image:  sj.jpg
 
-- name: Vicky Charisi
+- name: vicky charisi
   in: https://www.linkedin.com/in/vicky-charisi-62031916/
-  inst: Harvard University, US
+  inst: harvard university, us
   image: vc.jpeg
 
-- name: Waki Kamino
+- name: waki kamino
   in: https://www.linkedin.com/in/waki-kamino-b2b59812b/
-  inst: Cornell University, US
+  inst: cornell university, us
   image: wk.jpeg
 
-- name: Wendy Ju
+- name: wendy ju
   web: https://www.wendyju.com/
-  inst: Cornell Tech, US
+  inst: cornell tech, us
   image: wj.jpeg
 
-- name: Yuhan Hu
+- name: yuhan hu
   in: https://www.linkedin.com/in/yuhanhu-robot/
-  inst: Apple, US
+  inst: apple, us
   image: yh.jpeg
 
