@@ -37,10 +37,11 @@ layout: default
             font-weight: 400;
             font-style: normal;  
         }
-        h1,h2,h3,h4,h5,h6{
+        h1,h2{
             font-family: "londrina sketch", sans-serif;
             font-weight: 400;
             font-style: normal;
+            color: #af75e8;
         }
 
         .hero-section {
@@ -53,6 +54,7 @@ layout: default
             justify-content: center;
             align-items: center;
             background-color: white;
+            margin-bottom:40px;
         }
 
 
@@ -85,16 +87,16 @@ layout: default
 
 
         body {
-            background-color: #faf1e6;
+            background-color: white;
         }
 
         .section-images {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 100px;
-            padding: 40px 20px;
-            align-items: center;
-        }
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    padding: 40px 20px;
+    align-items: stretch; /* Ensure both left and right divs have the same height */
+}
 
         .section-images h2 {
             font-size: 2.5rem;
@@ -116,7 +118,8 @@ layout: default
         }
 
         .about-section {
-            padding: 60px 20px;
+            
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -139,7 +142,7 @@ layout: default
 
         .organizers-section {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             /* background-color: #e6ffe6; /* light green background */
         }
 
@@ -176,7 +179,7 @@ layout: default
         }
 
         .participants-section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -270,7 +273,7 @@ layout: default
             }
         }
         .highlight {
-            background-color:#efc8ff;
+            background-color:#f3d9ff;
             border-radius: 8px;
             padding: 2px 6px;
             color: black;
@@ -304,7 +307,7 @@ layout: default
     </div>
 
     <!-- about section -->
-    <div class="about-section">
+    <div class="about-section" style="background-color:#F7F7F7;">
         <h2>about</h2>
         <p>the design retreat <span class="highlight">brings together academics and industry professionals</span> from all over the world who are
             experts in the field of design for human-robot interaction (<span class="highlight">design for hri</span>) to engage in 2 days of hands-on
@@ -313,7 +316,7 @@ layout: default
     </div>
     <!-- solid color section -->
     <div class="solid-color">
-        <div class="dates" style="background-color: #fdfaf6;">
+        <div class="dates" style="background-color: #FFF;">
             <div class="section-images">
                 <!-- dates section -->
                 <div class="left">
@@ -332,7 +335,7 @@ layout: default
 
     </div>
 
-    <div class="organizers">
+    <div class="organizers" style="background-color:#F7F7F7;">
 
         <!-- organizers section -->
         <div class="organizers-section">
@@ -388,60 +391,59 @@ layout: default
     
 
 
-    <div class="participants-section"  style="background-color: #fdfaf6;">
+    <div class="participants-section" style="background-color: #FFF;">
         <h2>participants</h2>
-<!--
+    
         <div class="participants">
-
-            <div class="participants-column">
-                <ul>
-                    {% assign column1 = site.data.participants | slice: 0, 7 %}
-                    {% for participant in column1 %}
-                    <li><a href="{{ participant.link }}" target="_blank">{{ participant.name }}</a>, {{ participant.work
-                        }}</li>
-                    {% endfor %}
-                </ul>
+            {% assign participants = site.data.participants %}
+            
+            {% for participant in participants %}
+            <div class="participant">
+                <img src="participants/{{ participant.image }}" alt="{{ participant.name }}" class="participant-image">
+                <h3 class="participant-name">
+                    {{ participant.name }}
+                    {% if participant.in %}
+                        <a href="{{ participant.in }}" target="_blank" class="icon-link">
+                            <i class="fab fa-linkedin" title="LinkedIn"></i>
+                        </a>
+                    {% elsif participant.web %}
+                        <a href="{{ participant.web }}" target="_blank" class="icon-link">
+                            <i class="fas fa-globe" title="Website"></i>
+                        </a>
+                    {% endif %}
+                    
+                    {% if participant.scholar %}
+                        <a href="{{ participant.scholar }}" target="_blank" class="icon-link">
+                            <i class="fab fa-google-scholar" title="Google Scholar"></i>
+                        </a>
+                    {% endif %}
+                </h3>
+                <p class="participant-institution">{{ participant.inst }}<br>{{ participant.loc }}</p>
             </div>
-
-            <div class="participants-column">
-                <ul>
-                    {% assign column2 = site.data.participants | slice: 7, 7 %}
-                    {% for participant in column2 %}
-                    <li><a href="{{ participant.link }}" target="_blank">{{ participant.name }}</a>, {{ participant.work
-                        }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="participants-column">
-                <ul>
-                    {% assign column3 = site.data.participants | slice: 14, 7 %}
-                    {% for participant in column3 %}
-                    <li><a href="{{ participant.link }}" target="_blank">{{ participant.name }}</a>, {{ participant.work
-                        }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    -->
-        public list coming soon!
-    </div>
-    </div>
-    <div class="open-access">
-        <div class="participants-section">
-            <h2>future dissemination</h2>
-
-            <div class="participants">
-
-                check back after the retreat for open access materials.
-            </div>
+            {% endfor %}
         </div>
     </div>
-    <footer style="background-color: white; padding: 5px 0; text-align: center;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 2px;">
-            <img src="nsf.png" alt="NSF Logo" style="width: 24px; height: auto;">
+    
+    
+  
+    <div class="open-access" style="background-color:#F7F7F7;">
+        <div class="future-section" style="text-align: center; padding: 40px 20px;">
+            <h2 style="margin-bottom:20px;">Future</h2>
+    
+            <p>
+                We will be expanding the design-based concentration within the HRI and robotics communities.
+                <br>Check back on this website after the retreat for open access materials, additional future events, and publications!
+            </p>
+        </div>
+    </div>
+    <footer style=" padding: 20px 20px; text-align: center;">
+        
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                    <img src="nsf.png" alt="NSF Logo" style="width: 24px; height: auto;">
+
             <p style=" color: black; ">
-                the hri design retreat is part of the nsf eager award: “visioning design evolution for human-robot interaction”
+                the hri design retreat is part of the nsf eager award: "visioning design evolution for human-robot interaction"
             </p>
         </div>
     </footer>
@@ -452,6 +454,68 @@ layout: default
   gtag('js', new date());
   gtag('config', 'g-3rn77h1cfe');
 </script>
+
+<style>
+
+h2{
+    font-size: 2.5rem !important;
+}
+.participants {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 5 participants per row by default (for larger screens) */
+    gap: 20px; /* space between participants */
+    margin-top: 20px;
+}
+
+.participant {
+    text-align: center;
+}
+
+.participant-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.participant-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.participant-institution {
+    font-size: 14px;
+    color: #555;
+}
+
+.icon-link {
+    margin-left: 8px;
+}
+
+.icon-link i {
+    font-size: 16px;
+    color: black; /* LinkedIn color */
+}
+
+
+
+/* Tablet view: 3 participants per row */
+@media (max-width: 768px) {
+    .participants {
+        grid-template-columns: repeat(3, 1fr); /* 3 participants per row */
+    }
+}
+
+/* Mobile view: 1 participant per row */
+@media (max-width: 480px) {
+    .participants {
+        grid-template-columns: 1fr; /* 1 participant per row */
+    }
+}
+
+
+</style>
 </body>
 
 </html>
