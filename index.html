@@ -12,7 +12,7 @@ layout: default
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Londrina+Sketch&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
@@ -349,7 +349,7 @@ layout: default
                         <!-- icons next to name -->
 
                     </h3>
-                    <p>university of michigan, us</p> <p style="margin-top:4px">                         <a href="https://patricialvesoliveira.com/" target="_blank" class="icon-link">
+                    <p style="color:#555555">university of michigan, us</p> <p style="margin-top:4px;">                         <a href="https://patricialvesoliveira.com/" target="_blank" class="icon-link">
                         <i class="fas fa-globe" title="personal website"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/patricia-alves-oliveira" target="_blank" class="icon-link">
@@ -389,9 +389,37 @@ layout: default
         </div>
     </div>
     
+    <div class="research-team-section">
+        <h2>research team</h2>
+        <div class="research-team">
+            {% assign researchers = site.data.researchers %}
+            {% for researcher in researchers %}
+            <div class="researcher">
+                <img src="participants/{{ researcher.image }}" alt="{{ researcher.name }}">
+                <h3 class="professor-name">{{ researcher.name }} {% if researcher.web %}
+                        <a href="{{ researcher.web }}" class="icon-link">
+                            <i class="fas fa-globe" title="Website"></i>
+                        </a>
+                    {% endif %}
+                    {% if researcher.in %}
+                    <a href="{{ researcher.in }}" class="icon-link">
+                        <i class="fab fa-linkedin" title="LinkedIn"></i>
+                    </a></h3>
+                
+                <p>{{ researcher.inst }}</p>
+                <p style="margin-top:4px;">
 
+                   
+                {% endif %}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    
 
-    <div class="participants-section" style="background-color: #FFF;">
+    <div class="participants-section" style="background-color: #F7F7F7;">
         <h2>participants</h2>
     
         <div class="participants">
@@ -426,7 +454,7 @@ layout: default
     
     
   
-    <div class="open-access" style="background-color:#F7F7F7;">
+    <div class="open-access" >
         <div class="future-section" style="text-align: center; padding: 40px 20px;">
             <h2 style="margin-bottom:20px;">future</h2>
     
@@ -436,15 +464,14 @@ layout: default
             </p>
         </div>
     </div>
-    <footer style=" padding: 20px 20px; text-align: center;">
+    <footer style=" padding: 10px 20px; text-align: center; background-color:#F7F7F7;">
         
-
+        <h2 style="margin-bottom:5px;">funding</h2>
         <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
                     <img src="nsf.png" alt="NSF Logo" style="width: 24px; height: auto;">
-
+            
             <p style=" color: black; ">
-                the hri design retreat is part of the nsf eager award: "visioning design evolution for human-robot interaction"
-            </p>
+                the design retreat was funded by the national science foundation (nsf) award #24-paf08983: "eager: rdsv: visioning design evolution for human-robot interaction"</p>
         </div>
     </footer>
 <script async src="https://www.googletagmanager.com/gtag/js?id=g-3rn77h1cfe"></script>
@@ -510,6 +537,70 @@ h2{
 @media (max-width: 480px) {
     .participants {
         grid-template-columns: 1fr; /* 1 participant per row */
+    }
+}
+.research-team-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;  /* Optional: Adjust the margin to your preference */
+}
+.research-team {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.research-team-section{
+    padding: 40px 20px;
+
+}
+
+.researcher {
+    text-align: center;
+    width: 22%;  /* Make each image smaller, so they fit into four columns */
+    margin-bottom: 20px;
+}
+
+.researcher img {
+    width: 175px;  /* Adjust image size */
+    height: 175px; /* Keep the images square */
+    border-radius: 8px;
+}
+
+.researcher h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.researcher p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive adjustments: For smaller screens, display two researchers per row */
+@media (max-width: 768px) {
+    .research-team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .researcher {
+        width: 45%;
+    }
+}
+
+/* Mobile view: 1 researcher per row */
+@media (max-width: 480px) {
+    .research-team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .researcher {
+        width: 80%; /* Take up more space on smaller screens */
     }
 }
 
