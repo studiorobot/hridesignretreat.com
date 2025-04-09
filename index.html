@@ -397,12 +397,12 @@ layout: default
             <div class="researcher">
                 <img src="participants/{{ researcher.image }}" alt="{{ researcher.name }}">
                 <h3 class="professor-name">{{ researcher.name }} {% if researcher.web %}
-                        <a href="{{ researcher.web }}" class="icon-link">
+                        <a href="{{ researcher.web }}" class="icon-link" target="_blank">
                             <i class="fas fa-globe" title="Website"></i>
                         </a>
                     {% endif %}
                     {% if researcher.in %}
-                    <a href="{{ researcher.in }}" class="icon-link">
+                    <a href="{{ researcher.in }}" class="icon-link" target="_blank">
                         <i class="fab fa-linkedin" title="LinkedIn"></i>
                     </a></h3>
                 
