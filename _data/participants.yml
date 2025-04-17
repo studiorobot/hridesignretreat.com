@@ -33,7 +33,7 @@
 
 - name: karolina zawieska
   in: https://www.linkedin.com/in/karolina-zawieska-aa694528b/
-  inst: aarhus university, denmark
+  inst: copenhagen business school, denmark
   image: kz.jpeg
 
 
@@ -66,10 +66,6 @@
   image: pa.jpeg
 
 
-- name: safinah ali
-  web: https://safinahali.com/
-  inst: new york university, us
-  image: sa.jpeg
 
 - name: samantha reig
   web: https://samreig.com/
