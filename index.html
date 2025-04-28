@@ -308,8 +308,100 @@ layout: default
         </div>
     </div>
 
+<!-- documentary section -->
+<style>
+    .fullscreen-wrapper {
+        position: relative;
+        height: 100vh; /* default desktop behavior */
+        overflow: hidden;
+    }
+    
+    .fullscreen-image {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* default desktop behavior */
+        border-radius: 0;
+        background-color: black;
+    }
+    
+    @media (max-width: 768px) {
+        .fullscreen-wrapper {
+            height: auto; /* mobile: container adapts to image */
+        }
+        .fullscreen-image {
+            position: relative; /* no absolute on mobile */
+            width: 100%;
+            height: auto; /* maintain real image height */
+            object-fit: contain;
+        }
+    }
+    </style>
+    
+    <div class="documentary-section" style="background-color:#F7F7F7; padding: 0; text-align: center;">
+        <div style="margin: 30px auto 0; max-width: 100%; position: relative;">
+            <div class="fullscreen-wrapper">
+                <img src="group.jpg" alt="Documentary Group Image" class="fullscreen-image">
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <div style="margin: 30px auto 0; height: 100%; max-width: 100%; position: relative;">
+        <div style="position: relative;  height: 100vh; overflow: hidden;">
+          <iframe id="documentary-iframe"
+            src="https://www.youtube.com/embed/rxkWrh0lp7c?mute=1&enablejsapi=1&rel=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0;">
+        </iframe>
+        
+        </div>
+    </div>
+    -->
+
+<!--
+
+<script>
+    let player;
+    ∂
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('documentary-iframe');
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        // Load YouTube IFrame API
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+    
+        // Set up IntersectionObserver
+        const iframe = document.getElementById('documentary-iframe');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (player && player.playVideo) {
+                    if (entry.isIntersecting) {
+                        player.playVideo();
+                    } else {
+                        player.pauseVideo();
+                    }
+                }
+            });
+        }, { threshold: 0.5 }); // 50% visible to trigger
+    
+        observer.observe(iframe);
+    });
+    </script>
+
+-->
+    
+    
+
+
     <!-- about section -->
-    <div class="about-section" style="background-color:#F7F7F7;">
+    <div class="about-section" style="background-color:#FFF;">
         <h2>about</h2>
         <p>the design retreat <span class="highlight">brings together academics and industry professionals</span> from all over the world who are
             experts in the field of design for human-robot interaction (<span class="highlight">design for hri</span>) to engage in 2 days of hands-on
@@ -318,7 +410,7 @@ layout: default
     </div>
     <!-- solid color section -->
     <div class="solid-color">
-        <div class="dates" style="background-color: #FFF;">
+        <div class="dates" style="background-color:#F7F7F7;">
             <div class="section-images">
                 <!-- dates section -->
                 <div class="left">
@@ -337,7 +429,7 @@ layout: default
 
     </div>
 
-    <div class="organizers" style="background-color:#F7F7F7;">
+    <div class="organizers" style="background-color:#FFF;">
 
         <!-- organizers section -->
         <div class="organizers-section">
@@ -391,7 +483,7 @@ layout: default
         </div>
     </div>
     
-    <div class="research-team-section">
+    <div class="research-team-section" style="background-color:#F7F7F7;"">
         <h2>research team</h2>
         <div class="research-team">
             {% assign researchers = site.data.researchers %}
@@ -421,7 +513,7 @@ layout: default
     
     
 
-    <div class="participants-section" style="background-color: #F7F7F7;">
+    <div class="participants-section" style="background-color: #FFF;">
         <h2>participants</h2>
     
         <div class="participants">
@@ -453,20 +545,42 @@ layout: default
             {% endfor %}
         </div>
     </div>
-    
-    
-  
-    <div class="open-access" >
-        <div class="future-section" style="text-align: center; padding: 40px 20px;">
-            <h2 style="margin-bottom:20px;">future</h2>
-    
-            <p>
-                we will be expanding the design-based concentration within the hri and robotics communities.
-                <br>check back on this website after the retreat for open access materials, additional future events, and publications!
-            </p>
+    <!-- publications & events section -->
+<div class="publications-events-section" style="background-color:#F7F7F7; padding: 40px 20px; text-align: center;">
+    <h2 style="margin-bottom:20px;">publications, events, & materials</h2>
+    <p>   we will be expanding the design-based concentration within the hri and robotics communities.
+        <br>check back on this website after the retreat for open access materials, additional future events, and publications!
+   </p>
+</div>
+
+<!-- materials section -->
+ <!--
+<div class="materials-section" style="background-color:#FFF; padding: 40px 20px; text-align: center;">
+    <h2>materials</h2>
+    <div style="display: flex; justify-content: space-evenly; margin-top: 30px;">
+        <div style="max-width: 300px;">
+            <img src="https://robotdesign.studio/projects/past/emar/thumbnail.png" alt="Material 1" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <p style="margin-top: 10px; font-weight: bold;">Workshop Notes</p>
         </div>
+
+        <div style="max-width: 300px;">
+            <img src="https://robotdesign.studio/projects/past/emar/thumbnail.png" alt="Material 2" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <p style="margin-top: 10px; font-weight: bold;">Design Artifacts</p>
+        </div>
+          <div style="max-width: 300px;">
+            <img src="https://robotdesign.studio/projects/past/emar/thumbnail.png" alt="Material 2" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <p style="margin-top: 10px; font-weight: bold;">Design Artifacts</p>
+        </div>
+
     </div>
-    <footer style=" padding: 40px 20px; text-align: center; background-color:#F7F7F7;">
+<br>
+access to our materials is available on our <a href="https://github.com/studiorobot/hri-design-retreat" target="_blank" style="color: #af75e8; text-decoration: none;">github</a>.
+
+</div>
+-->
+  
+  
+    <footer style=" padding: 40px 20px; text-align: center; background-color:#FFF;">
         
         <h2 style="margin-bottom:20px;">funding</h2>
         <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
