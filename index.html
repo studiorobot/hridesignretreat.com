@@ -34,12 +34,15 @@ layout: default
             font-weight: 400;
             font-style: normal;
         }
-        .professor-name{
+
+        .professor-name {
             font-family: "baumans", system-ui;
             font-weight: 400;
-            font-style: normal;  
+            font-style: normal;
         }
-        h1,h2{
+
+        h1,
+        h2 {
             font-family: "londrina sketch", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -56,7 +59,7 @@ layout: default
             justify-content: center;
             align-items: center;
             background-color: white;
-            margin-bottom:40px;
+            margin-bottom: 40px;
         }
 
 
@@ -64,7 +67,7 @@ layout: default
             position: relative;
             text-align: center;
             color: black;
-   
+
 
         }
 
@@ -93,12 +96,13 @@ layout: default
         }
 
         .section-images {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 100px;
-    padding: 40px 20px;
-    align-items: stretch; /* Ensure both left and right divs have the same height */
-}
+            display: flex;
+            justify-content: space-evenly;
+            gap: 100px;
+            padding: 40px 20px;
+            align-items: stretch;
+            /* Ensure both left and right divs have the same height */
+        }
 
         .section-images h2 {
             font-size: 2.5rem;
@@ -120,8 +124,9 @@ layout: default
         }
 
         .about-section {
-            
-            padding: 40px 20px;
+
+            padding: 20px 20px;
+            padding-bottom:30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -144,7 +149,8 @@ layout: default
 
         .organizers-section {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 20px;
+            padding-bottom:30px;
             /* background-color: #e6ffe6; /* light green background */
         }
 
@@ -181,7 +187,8 @@ layout: default
         }
 
         .participants-section {
-            padding: 40px 20px;
+            padding: 20px 20px;
+            padding-bottom:30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -234,7 +241,7 @@ layout: default
 
             .organizer {
                 width: 80%;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
 
             .participants {
@@ -274,28 +281,34 @@ layout: default
                 font-size: 2rem;
             }
         }
+
         .highlight {
-            background-color:#E6E6FA;
+            background-color: #E6E6FA;
             border-radius: 8px;
             padding: 2px 6px;
             color: black;
             font-weight: bold;
         }
+
         /* style for the icons */
-.icon-link {
-    color: black;         /* change the color of icons to grey */
-    text-decoration: none; /* remove underline */
-    margin-left: 2px;   /* add spacing between the name and the icons */
-}
+        .icon-link {
+            color: black;
+            /* change the color of icons to grey */
+            text-decoration: none;
+            /* remove underline */
+            margin-left: 2px;
+            /* add spacing between the name and the icons */
+        }
 
-.icon-link i {
-    font-size: 20px;  /* adjust icon size */
-}
+        .icon-link i {
+            font-size: 20px;
+            /* adjust icon size */
+        }
 
-.icon-link:hover {
-    color: darkslategray;  /* slight change in color on hover */
-}
-
+        .icon-link:hover {
+            color: darkslategray;
+            /* slight change in color on hover */
+        }
     </style>
 </head>
 
@@ -308,37 +321,44 @@ layout: default
         </div>
     </div>
 
-<!-- documentary section -->
-<style>
-    .fullscreen-wrapper {
-        position: relative;
-        height: 100vh; /* default desktop behavior */
-        overflow: hidden;
-    }
-    
-    .fullscreen-image {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* default desktop behavior */
-        border-radius: 0;
-        background-color: black;
-    }
-    
-    @media (max-width: 768px) {
+    <!-- documentary section -->
+    <style>
         .fullscreen-wrapper {
-            height: auto; /* mobile: container adapts to image */
+            position: relative;
+            height: 100vh;
+            /* default desktop behavior */
+            overflow: hidden;
         }
+
         .fullscreen-image {
-            position: relative; /* no absolute on mobile */
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto; /* maintain real image height */
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
+            /* default desktop behavior */
+            border-radius: 0;
+            background-color: black;
         }
-    }
+
+        @media (max-width: 768px) {
+            .fullscreen-wrapper {
+                height: auto;
+                /* mobile: container adapts to image */
+            }
+
+            .fullscreen-image {
+                position: relative;
+                /* no absolute on mobile */
+                width: 100%;
+                height: auto;
+                /* maintain real image height */
+                object-fit: contain;
+            }
+        }
     </style>
-    
+
     <div class="documentary-section" style="background-color:#F7F7F7; padding: 0; text-align: center;">
         <div style="margin: 30px auto 0; max-width: 100%; position: relative;">
             <div class="fullscreen-wrapper">
@@ -346,7 +366,7 @@ layout: default
             </div>
         </div>
     </div>
-    
+
     <!--
     <div style="margin: 30px auto 0; height: 100%; max-width: 100%; position: relative;">
         <div style="position: relative;  height: 100vh; overflow: hidden;">
@@ -362,7 +382,7 @@ layout: default
     </div>
     -->
 
-<!--
+    <!--
 
 <script>
     let player;
@@ -396,16 +416,19 @@ layout: default
     </script>
 
 -->
-    
-    
+
+
 
 
     <!-- about section -->
     <div class="about-section" style="background-color:#F7F7F7;">
         <h2>about</h2>
-        <p>the design retreat <span class="highlight">brings together academics and industry professionals</span> from all over the world who are
-            experts in the field of design for human-robot interaction (<span class="highlight">design for hri</span>) to engage in 2 days of hands-on
-            interactive activities that will explore how to shape the future of design for hri of a <span class="highlight">5-10 years roadmap</span>.
+        <p>the design retreat <span class="highlight">brings together academics and industry professionals</span> from
+            all over the world who are
+            experts in the field of design for human-robot interaction (<span class="highlight">design for hri</span>)
+            to engage in 2 days of hands-on
+            interactive activities that will explore how to shape the future of design for hri of a <span
+                class="highlight">5-10 years roadmap</span>.
         </p>
     </div>
 
@@ -423,18 +446,22 @@ layout: default
                         <!-- icons next to name -->
 
                     </h3>
-                    <p style="color:#555555">university of michigan, us</p> <p style="margin-top:4px;">                         <a href="https://patricialvesoliveira.com/" target="_blank" class="icon-link">
-                        <i class="fas fa-globe" title="personal website"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patricia-alves-oliveira" target="_blank" class="icon-link">
-                        <i class="fab fa-linkedin" title="linkedin"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=TbN31LMAAAAJ&hl=en" target="_blank" class="icon-link">
-                        <i class="fa-brands fa-google-scholar"></i>
-                    </a>
-                    <a href="mailto:robopati@umich.edu" class="icon-link" target="_blank" >
-                        <i class="fas fa-envelope" title="email"></i>
-                    </a></p>
+                    <p style="color:#555555">university of michigan, us</p>
+                    <p style="margin-top:4px;"> <a href="https://patricialvesoliveira.com/" target="_blank"
+                            class="icon-link">
+                            <i class="fas fa-globe" title="personal website"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/patricia-alves-oliveira" target="_blank" class="icon-link">
+                            <i class="fab fa-linkedin" title="linkedin"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=TbN31LMAAAAJ&hl=en" target="_blank"
+                            class="icon-link">
+                            <i class="fa-brands fa-google-scholar"></i>
+                        </a>
+                        <a href="mailto:robopati@umich.edu" class="icon-link" target="_blank">
+                            <i class="fas fa-envelope" title="email"></i>
+                        </a>
+                    </p>
                 </div>
                 <div class="organizer">
                     <img src="anastasia.jpg" alt="anastasia">
@@ -442,82 +469,86 @@ layout: default
                         <!-- name -->
                         anastasia kouvaras ostrowski
                         <!-- icons next to name -->
-                        
+
                     </h3>
                     <p style="color:#555555">purdue university, us</p>
-                    
+
                     <p style="margin-top:4px"><a href="https://www.akostrowski.com/" target="_blank" class="icon-link">
-                        <i class="fas fa-globe" title="personal website"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anastasia-kouvaras-ostrowski/" target="_blank" class="icon-link">
-                        <i class="fab fa-linkedin" title="linkedin"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=nnNYtkAAAAAJ&hl=en" target="_blank" class="icon-link">
-                        <i class="fab fa-google-scholar"></i>
-                    </a>
-                    <a href="mailto:akostrow@purdue.edu" class="icon-link" target="_blank" >
-                        <i class="fas fa-envelope" title="email"></i>
-                    </a></p>
+                            <i class="fas fa-globe" title="personal website"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anastasia-kouvaras-ostrowski/" target="_blank"
+                            class="icon-link">
+                            <i class="fab fa-linkedin" title="linkedin"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=nnNYtkAAAAAJ&hl=en" target="_blank"
+                            class="icon-link">
+                            <i class="fab fa-google-scholar"></i>
+                        </a>
+                        <a href="mailto:akostrow@purdue.edu" class="icon-link" target="_blank">
+                            <i class="fas fa-envelope" title="email"></i>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="research-team-section" style="background-color:#F7F7F7;"">
-        <h2>research team</h2>
-        <div class="research-team">
-            {% assign researchers = site.data.researchers %}
-            {% for researcher in researchers %}
-            <div class="researcher">
-                <img src="participants/{{ researcher.image }}" alt="{{ researcher.name }}">
-                <h3 class="professor-name">{{ researcher.name }} {% if researcher.web %}
-                        <a href="{{ researcher.web }}" class="icon-link" target="_blank">
-                            <i class="fas fa-globe" title="Website"></i>
-                        </a>
-                    {% endif %}
-                    {% if researcher.in %}
-                    <a href="{{ researcher.in }}" class="icon-link" target="_blank">
-                        <i class="fab fa-linkedin" title="LinkedIn"></i>
-                    </a></h3>
-                
-                <p>{{ researcher.inst }}</p>
-                <p style="margin-top:4px;">
 
-                   
+    <div class="research-team-section" style="background-color:#F7F7F7;">
+        <h2>research team</h2>
+        <div class=" research-team">
+        {% assign researchers = site.data.researchers %}
+        {% for researcher in researchers %}
+        <div class="researcher">
+            <img src="participants/{{ researcher.image }}" alt="{{ researcher.name }}">
+            <h3 class="professor-name">{{ researcher.name }} {% if researcher.web %}
+                <a href="{{ researcher.web }}" class="icon-link" target="_blank">
+                    <i class="fas fa-globe" title="Website"></i>
+                </a>
                 {% endif %}
-                </p>
-            </div>
-            {% endfor %}
+                {% if researcher.in %}
+                <a href="{{ researcher.in }}" class="icon-link" target="_blank">
+                    <i class="fab fa-linkedin" title="LinkedIn"></i>
+                </a>
+            </h3>
+
+            <p>{{ researcher.inst }}</p>
+            <p style="margin-top:4px;">
+
+
+                {% endif %}
+            </p>
         </div>
+        {% endfor %}
     </div>
-    
-    
+    </div>
+
+
 
     <div class="participants-section" style="background-color: #FFF;">
         <h2>participants</h2>
-    
+
         <div class="participants">
             {% assign participants = site.data.participants %}
-            
+
             {% for participant in participants %}
             <div class="participant">
                 <img src="participants/{{ participant.image }}" alt="{{ participant.name }}" class="participant-image">
                 <h3 class="participant-name">
                     {{ participant.name }}
                     {% if participant.in %}
-                        <a href="{{ participant.in }}" target="_blank" class="icon-link">
-                            <i class="fab fa-linkedin" title="LinkedIn"></i>
-                        </a>
+                    <a href="{{ participant.in }}" target="_blank" class="icon-link">
+                        <i class="fab fa-linkedin" title="LinkedIn"></i>
+                    </a>
                     {% elsif participant.web %}
-                        <a href="{{ participant.web }}" target="_blank" class="icon-link">
-                            <i class="fas fa-globe" title="Website"></i>
-                        </a>
+                    <a href="{{ participant.web }}" target="_blank" class="icon-link">
+                        <i class="fas fa-globe" title="Website"></i>
+                    </a>
                     {% endif %}
-                    
+
                     {% if participant.scholar %}
-                        <a href="{{ participant.scholar }}" target="_blank" class="icon-link">
-                            <i class="fab fa-google-scholar" title="Google Scholar"></i>
-                        </a>
+                    <a href="{{ participant.scholar }}" target="_blank" class="icon-link">
+                        <i class="fab fa-google-scholar" title="Google Scholar"></i>
+                    </a>
                     {% endif %}
                 </h3>
                 <p class="participant-institution">{{ participant.inst }}<br>{{ participant.loc }}</p>
@@ -526,330 +557,424 @@ layout: default
         </div>
     </div>
 
-      <div class="materials-section" style="background-color:#F7F7F7; padding: 40px 20px; text-align: center;">
-        <h2>materials & publications</h2>
-        <div class="materials-container" style="display: flex; justify-content: space-evenly; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
-          
-          <div class="material-item" style="flex: 1;">
-            <div style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-              <img src="images/metaphors.png" alt="Material 1" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <p style="margin-top: 10px; font-weight: bold;">metaphors</p>
-          </div>
+    <div class="materials-section" style="background-color:#F7F7F7; padding: 20px 20px; padding-bottom:30px; text-align: center;">
+        <h2>materials</h2>
+        <div class="materials-container"
+            style="display: flex; justify-content: space-evenly; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
 
-          <div class="material-item" style="flex: 1;">
-            <div style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-              <img src="/images/design-fictions.png" alt="Material 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            <div class="material-item" style="flex: 1;">
+                <div
+                    style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="images/metaphors.png" alt="Material 1"
+                        style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <p style="margin-top: 10px; font-weight: bold;">metaphors</p>
             </div>
-            <p style="margin-top: 10px; font-weight: bold;">design fictions</p>
-          </div>
 
-          <div class="material-item" style="flex: 1;">
-            <div style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-              <img src="/images/backcasting.png" alt="Material 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            <div class="material-item" style="flex: 1;">
+                <div
+                    style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="/images/design-fictions.png" alt="Material 2"
+                        style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <p style="margin-top: 10px; font-weight: bold;">design fictions</p>
             </div>
-            <p style="margin-top: 10px; font-weight: bold;">backcasting</p>
-          </div>
 
-          <div class="material-item" style="flex: 1;">
-            <div style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-              <img src="/images/zine.png" alt="Material 4" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            <div class="material-item" style="flex: 1;">
+                <div
+                    style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="/images/backcasting.png" alt="Material 3"
+                        style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <p style="margin-top: 10px; font-weight: bold;">backcasting</p>
             </div>
-            <p style="margin-top: 10px; font-weight: bold;">zine</p>
-          </div>
+
+            <div class="material-item" style="flex: 1;">
+                <div
+                    style="height:300px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="/images/zine.png" alt="Material 4"
+                        style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <p style="margin-top: 10px; font-weight: bold;">zine</p>
+            </div>
 
         </div>
 
-        <br><br>
-        you can access our materials on 
-        <a href="https://github.com/studiorobot/hri-design-retreat" target="_blank" style="color: #af75e8; text-decoration: none;">github</a>.<br><p style="margin-top:5px;">publications coming soon.</p>
+       <p style="padding-top:20px;">
+        you can access our materials on
+        <a href="https://github.com/studiorobot/hri-design-retreat" target="_blank"
+            style="color: #af75e8; text-decoration: none;">github</a>.</p>  
     </div>
-  
+    <div class="publications-section" style="background-color:#FFF; padding: 20px 20px; padding-bottom: 30px; text-align: left;">
+        <h2 style="text-align: center; margin-bottom: 20px;">publications</h2>
+        <!--
+        <div class="publications-container" style="display: flex; gap: 40px; align-items: flex-start;">
+        <div class="publication" style="display: flex; flex-direction:column;">
+            <div style="flex: 0 0 auto; margin-right: 20px;border-radius: 5px;">
+                <img src="first-page.jpeg" alt="first page of publication" loading="lazy" style="
+        height: 200px; 
+        width: auto; 
+        max-width: 100%; 
+        display: inline-block; 
+        vertical-align: middle; 
+        border: 1px solid #3e3e3e; 
+        border-radius: inherit; 
+        outline: 0;
+        box-sizing: border-box;">
+            </div>
+
+            <div class="publication-details" style="margin-top:15px;">
+                <h3 style="font-size: 16px; margin: 0 0 5px;">publication name</h3>
+                <p style="margin: 0 0 5px; font-size: 14px;color:#555">patricia alves-oliveira </p>
+                <p style="margin: 0 0 10px; font-size: 15px;color:#555">american scientist
+
+                </p>
+
+                <a href="publications/94.pdf" target="_blank" class="link-color"
+                    style="text-decoration: none;color:black;font-size:14px;">
+                    <i class="fa-regular fa-file"></i> pdf
+                </a>&nbsp
+                <a href="publications/94.pdf" target="_blank" class="link-color"
+                    style="text-decoration: none;color:black;font-size:14px;">
+                    <i class="fa-solid fa-play"></i> video</a>&nbsp
+                <a href="publications/94.pdf" target="_blank" class="link-color"
+                    style="text-decoration: none;color:black;font-size:14px;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> doi</a>
+
+
+            </div>
+        </div>
+        -->
+                <p style=" text-align: center;">check back later for publications.</p>
+
+    </div>
     <style>
-      @media screen and (max-width: 768px) {
-        .materials-container {
-          flex-direction: column !important;
-          align-items: center !important;
-          justify-content: center !important;
+        @media screen and (max-width: 768px) {
+            .materials-container {
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+
+            .material-item {
+                max-width: 100% !important;
+                flex: none !important;
+            }
         }
 
-        .material-item {
-          max-width: 100% !important;
-          flex: none !important;
-        }
-      }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .materials-container {
+                justify-content: center !important;
+                gap: 20px !important;
+            }
 
-      @media screen and (min-width: 769px) and (max-width: 1024px) {
-        .materials-container {
-          justify-content: center !important;
-          gap: 20px !important;
+            .material-item {
+                flex: 0 0 calc(50% - 10px) !important;
+                max-width: calc(50% - 10px) !important;
+            }
         }
 
-        .material-item {
-          flex: 0 0 calc(50% - 10px) !important;
-          max-width: calc(50% - 10px) !important;
+        @media screen and (min-width: 1025px) {
+            .materials-container {
+                justify-content: space-evenly !important;
+            }
+
+            .material-item {
+                flex: 1 !important;
+            }
         }
-      }
-      
-      @media screen and (min-width: 1025px) {
-        .materials-container {
-          justify-content: space-evenly !important;
-        }
-        
-        .material-item {
-          flex: 1 !important;
-        }
-      }
     </style>
-  
 
-  <div class="events-section" style="background-color: #FFF;">
-    <h2>events</h2>
-</p> 
-    <!-- single event block -->
-    <div class="event">
-        <!-- left: image -->
-        <div class="event-image">
-            <img src="pic1.jpeg" alt="event image">
+
+    <div class="events-section" style="background-color: #F7F7F7;">
+        <h2>hri design retreat</h2>
+        </p>
+        <!-- single event block -->
+        <div class="event">
+            <!-- left: image -->
+            <div class="event-image">
+                <img src="pic1.jpeg" alt="event image">
+            </div>
+
+            <!-- right: details -->
+            <div class="event-details">
+                <h3>the design retreat</h3>
+                <p><strong>location:</strong> <a href="https://www.newlab.com/about" target="_blank">newlab</a>, 2050
+                    15th st, detroit, mi 48216</p>
+                <p><strong>dates:</strong> april 14–15, 2025</p>
+                <p>hosted in newlab, a creative and entrepreneurial brand-new space in detroit.</p>
+            </div>
         </div>
 
-        <!-- right: details -->
-        <div class="event-details">
-            <h3>the design retreat</h3>
-            <p><strong>location:</strong> <a href="https://www.newlab.com/about" target="_blank">newlab</a>, 2050 15th st, detroit, mi 48216</p>
-            <p><strong>dates:</strong> april 14–15, 2025</p>
-            <p>hosted in newlab, a creative and entrepreneurial brand-new space in detroit.</p>
-        </div>
     </div>
-    <p style="margin-top:30px; text-align: center;">check back later for future events!
-
-</div>
 
 
+    <div class="events-section" style="background-color: #FFF;">
+        <h2>future events</h2>
+
+
+        <p style=" text-align: center;">to view upcoming events or add your own, please visit our <a
+                href="https://docs.google.com/document/d/1AVU-4um7yty-cTXWf6sM3XWuYieAwaK9NJhDBk8YqgM/edit?usp=sharing"
+                target="_blank">google doc</a>.</p>
+
+    </div>
+
+
+    <style>
+        @media screen and (max-width: 768px) {
+            .publication {
+                padding-left: 0px !important;
+            }
+
+        }
+    </style>
 
 
 
 
 
-<style>.events-section {
-background-color: #FFF;
-padding: 40px 20px;
-}
-
-.events-section h2 {
-text-align: center;
-margin-bottom: 20px;
-font-size: 2.5rem;
-}
-
-.event {
-display: flex;
-justify-content: space-evenly;
-align-items: stretch;
-}
-
-.event-image,
-.event-details {
-display: flex;
-flex-direction: column;
-width: 45%;
-}
-
-.event-image {
-align-items: center;
-}
-
-.event-image img {
-width: 100%;
-height: 150px;
-
-object-fit: cover;
-border-radius: 8px;
-}
-
-.event-details {
-align-items: flex-start;
-justify-content: center;
-text-align: left;
-}
-
-.event-details h3 {
-margin-bottom: 10px;
-}
-
-.event-details p {
-margin-bottom: 10px;
-}
-
-/* Mobile view adjustments */
-@media screen and (max-width: 768px) {
-.event {
-    flex-direction: column;
-    align-items: center;  /* Center-align items when stacked */
-    gap: 20px;  /* Reduce gap between image and text */
-}
-
-.event-image,
-.event-details {
-    width: 100%;  /* Full width on mobile */
-}
-
-.event-details {
-    text-align: left; /* Keep text left-aligned */
-}
-
-.event-image img {
-    height: auto;  /* Adjust image height to be proportional on mobile */
-}
-}
 
 
-</style>
 
 
-  
-    <footer style=" padding: 40px 20px; text-align: center; background-color:#F7F7F7;">
-        
+
+    <style>
+        .events-section {
+            background-color: #FFF;
+            padding: 20px 20px;
+            padding-bottom:30px;
+        }
+
+        .events-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .event {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+
+        .event-image,
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+        }
+
+        .event-image {
+            align-items: center;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 150px;
+
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .event-details {
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .event-details h3 {
+            margin-bottom: 10px;
+        }
+
+        .event-details p {
+            margin-bottom: 10px;
+        }
+
+        /* Mobile view adjustments */
+        @media screen and (max-width: 768px) {
+            .event {
+                flex-direction: column;
+                align-items: center;
+                /* Center-align items when stacked */
+                gap: 20px;
+                /* Reduce gap between image and text */
+            }
+
+            .event-image,
+            .event-details {
+                width: 100%;
+                /* Full width on mobile */
+            }
+
+            .event-details {
+                text-align: left;
+                /* Keep text left-aligned */
+            }
+
+            .event-image img {
+                height: auto;
+                /* Adjust image height to be proportional on mobile */
+            }
+        }
+    </style>
+
+
+
+    <footer style=" padding: 20px 20px; padding-bottom:30px; text-align: center; background-color:#F7F7F7;">
+
         <h2 style="margin-bottom:20px;">funding</h2>
         <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
-                    <img src="nsf.png" alt="NSF Logo" style="width: 24px; height: auto;">
-            
+            <img src="nsf.png" alt="NSF Logo" style="width: 24px; height: auto;">
+
             <p style=" color: black; ">
-                the design retreat was funded by the national science foundation (nsf) award #24-paf08983: "eager: rdsv: visioning design evolution for human-robot interaction"</p>
+                the design retreat was funded by the national science foundation (nsf) award #24-paf08983: "eager:
+                rdsv:
+                visioning design evolution for human-robot interaction"</p>
         </div>
     </footer>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RN77H1CFE"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3RN77H1CFE');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3RN77H1CFE');
     </script>
 
-<style>
+    <style>
+        h2 {
+            font-size: 2.5rem !important;
+        }
 
-h2{
-    font-size: 2.5rem !important;
-}
-.participants {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 5 participants per row by default (for larger screens) */
-    gap: 20px; /* space between participants */
-}
+        .participants {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            /* 5 participants per row by default (for larger screens) */
+            gap: 20px;
+            /* space between participants */
+        }
 
-.participant {
-    text-align: center;
-}
+        .participant {
+            text-align: center;
+        }
 
-.participant-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
+        .participant-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
 
-.participant-name {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px 0;
-}
+        .participant-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
 
-.participant-institution {
-    font-size: 14px;
-    color: #555;
-}
+        .participant-institution {
+            font-size: 14px;
+            color: #555;
+        }
 
-.icon-link {
-    margin-left: 8px;
-}
+        .icon-link {
+            margin-left: 8px;
+        }
 
-.icon-link i {
-    font-size: 16px;
-    color: black; /* LinkedIn color */
-}
-
-
-
-/* Tablet view: 3 participants per row */
-@media (max-width: 768px) {
-    .participants {
-        grid-template-columns: repeat(3, 1fr); /* 3 participants per row */
-    }
-}
-
-/* Mobile view: 1 participant per row */
-@media (max-width: 480px) {
-    .participants {
-        grid-template-columns: 1fr; /* 1 participant per row */
-    }
-}
-.research-team-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;  /* Optional: Adjust the margin to your preference */
-}
-.research-team {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-
-}
-.research-team-section{
-    padding: 40px 20px;
-
-}
-
-.researcher {
-    text-align: center;
-    width: 22%;  /* Make each image smaller, so they fit into four columns */
-    margin-bottom: 20px;
-}
-
-.researcher img {
-    width: 175px;  /* Adjust image size */
-    height: 175px; /* Keep the images square */
-    border-radius: 8px;
-}
-
-.researcher h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.researcher p {
-    font-size: 14px;
-    color: #555;
-}
-
-/* Responsive adjustments: For smaller screens, display two researchers per row */
-@media (max-width: 768px) {
-    .research-team {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .researcher {
-        width: 45%;
-    }
-}
-
-/* Mobile view: 1 researcher per row */
-@media (max-width: 480px) {
-    .research-team {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .researcher {
-        width: 80%; /* Take up more space on smaller screens */
-    }
-}
+        .icon-link i {
+            font-size: 16px;
+            color: black;
+            /* LinkedIn color */
+        }
 
 
-</style>
+
+        /* Tablet view: 3 participants per row */
+        @media (max-width: 768px) {
+            .participants {
+                grid-template-columns: repeat(3, 1fr);
+                /* 3 participants per row */
+            }
+        }
+
+        /* Mobile view: 1 participant per row */
+        @media (max-width: 480px) {
+            .participants {
+                grid-template-columns: 1fr;
+                /* 1 participant per row */
+            }
+        }
+
+        .research-team-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            /* Optional: Adjust the margin to your preference */
+        }
+
+        .research-team {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .research-team-section {
+            padding: 20px 20px;
+            padding-bottom:30px;
+
+        }
+
+        .researcher {
+            text-align: center;
+            width: 22%;
+            /* Make each image smaller, so they fit into four columns */
+        }
+
+        .researcher img {
+            width: 175px;
+            /* Adjust image size */
+            height: 175px;
+            /* Keep the images square */
+            border-radius: 8px;
+        }
+
+        .researcher h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .researcher p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Responsive adjustments: For smaller screens, display two researchers per row */
+        @media (max-width: 768px) {
+            .research-team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .researcher {
+                width: 45%;
+            }
+        }
+
+        /* Mobile view: 1 researcher per row */
+        @media (max-width: 480px) {
+            .research-team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .researcher {
+                width: 80%;
+                /* Take up more space on smaller screens */
+            }
+        }
+    </style>
 </body>
 
 </html>
