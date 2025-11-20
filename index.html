@@ -360,130 +360,82 @@ layout: default
     </style>
 
 
-    <!--
+
     <style>
         .video-wrapper {
-          position: relative;
-          width: 100%;
-          padding-top: 56.25%;
-          overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
         }
-      
+
         .video-wrapper iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
-      </style>
-      
-      <div class="video-wrapper">
-        <iframe id="documentary-iframe"
-          src="https://www.youtube.com/embed/rxkWrh0lp7c?mute=1&enablejsapi=1&rel=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      
-   
-
-
-
-<script>
-    let player;
-    
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('documentary-iframe');
-    }
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        // Load YouTube IFrame API
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
-    
-        // Set up IntersectionObserver
-        const iframe = document.getElementById('documentary-iframe');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (player && player.playVideo) {
-                    if (entry.isIntersecting) {
-                        player.playVideo();
-                    } else {
-                        player.pauseVideo();
-                    }
-                }
-            });
-        }, { threshold: 0.5 }); // 50% visible to trigger
-    
-        observer.observe(iframe);
-    });
-    </script>
--->
+    </style>
 
 
 
 
-    <div class="documentary-section" style="background-color:#F7F7F7; padding: 0; text-align: center;">
-        <div style="margin: 30px auto 0; max-width: 100%; position: relative;">
-            <div class="fullscreen-wrapper">
-                <img src="group.jpg" alt="Documentary Group Image" class="fullscreen-image">
-            </div>
-        </div>
-    </div>
 
-    <!--
+
+
+
     <div style="margin: 30px auto 0; height: 100%; max-width: 100%; position: relative;">
         <div style="position: relative;  height: 100vh; overflow: hidden;">
-          <iframe id="documentary-iframe"
-            src="https://www.youtube.com/embed/rxkWrh0lp7c?mute=1&enablejsapi=1&rel=0"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0;">
-        </iframe>
-        
+            <iframe id="documentary-iframe" src="https://www.youtube.com/embed/Z4hTQ4E3AgE?mute=1&enablejsapi=1&rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0;">
+            </iframe>
+
         </div>
     </div>
-    -->
 
-    <!--
 
-<script>
-    let player;
-    ∂
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('documentary-iframe');
-    }
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        // Load YouTube IFrame API
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
-    
-        // Set up IntersectionObserver
-        const iframe = document.getElementById('documentary-iframe');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (player && player.playVideo) {
-                    if (entry.isIntersecting) {
-                        player.playVideo();
-                    } else {
-                        player.pauseVideo();
+
+
+
+
+
+
+    <script>
+        let player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('documentary-iframe');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load YouTube IFrame API
+            const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            document.head.appendChild(tag);
+
+            // Set up IntersectionObserver
+            const iframe = document.getElementById('documentary-iframe');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (player && player.playVideo) {
+                        if (entry.isIntersecting) {
+                            player.playVideo();
+                        } else {
+                            player.pauseVideo();
+                        }
                     }
-                }
-            });
-        }, { threshold: 0.5 }); // 50% visible to trigger
-    
-        observer.observe(iframe);
-    });
+                });
+            }, { threshold: 0.5 }); // 50% visible to trigger
+
+            observer.observe(iframe);
+        });
     </script>
 
--->
 
 
 
@@ -676,7 +628,7 @@ layout: default
         </p>
     </div>
 
-        <!-- Moments Section -->
+    <!-- Moments Section -->
     <div class="moments-section" style="background-color:#FFF; padding: 20px 20px; padding-bottom:30px;">
         <h2 style="text-align: center; margin-bottom: 20px;">moments</h2>
 
@@ -774,7 +726,7 @@ layout: default
     </style>
 
 
-  
+
 
     <div class="events-section" style="background-color: #FFF;">
         <h2>future events</h2>
@@ -786,7 +738,7 @@ layout: default
 
     </div>
 
-  <div class="events-section" style="background-color: #F7F7F7;">
+    <div class="events-section" style="background-color: #F7F7F7;">
         <h2>hri design retreat</h2>
         </p>
         <!-- single event block -->
@@ -947,7 +899,7 @@ layout: default
         }
 
         .moment-item4 {
-                        background-image: url("images/moments/moments3.jpg");
+            background-image: url("images/moments/moments3.jpg");
 
             background-size: cover;
             background-position: center;
@@ -1077,7 +1029,17 @@ layout: default
                 rdsv:
                 visioning design evolution for human-robot interaction"</p>
         </div>
+
+
     </footer>
+
+    <div class="documentary-section" style="background-color:#F7F7F7; padding: 0; text-align: center;">
+        <div style="margin: 30px auto 0; max-width: 100%; position: relative;">
+            <div class="fullscreen-wrapper">
+                <img src="group.jpg" alt="Documentary Group Image" class="fullscreen-image">
+            </div>
+        </div>
+    </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RN77H1CFE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
